@@ -1,2 +1,2 @@
 #!/bin/bash
-cp -i*.html alx-system_engineering-devops
+cp -un*.html ../
