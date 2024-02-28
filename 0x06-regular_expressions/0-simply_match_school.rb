@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 
 def match_school(input)
-  pattern = /School$/
+  pattern = /School/
 
-  match = pattern.match(input)
+  matches = input.scan(pattern)
 
-  if match
-    puts match[0]
+  if matches.any?
+    puts matches.join
   else
     puts "$"
   end
