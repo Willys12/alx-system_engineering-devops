@@ -2,6 +2,6 @@
 - This project focus more on networking basics.
 
 ## General
-- What is localhost.
+- What is localhost - refers to the current computer used to access it.
 - What is 0.0.0.0
 - What is /etc/hosts
