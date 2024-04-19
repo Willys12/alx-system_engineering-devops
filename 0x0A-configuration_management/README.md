@@ -1,6 +1,6 @@
-<center><h1>0x0A. Configuration management<h2></center>
+<center> <h1>0x0A. Configuration management<h2> </center>
 
-- Configuration management:- It is an IT management process that tracks individual configuration items of an IT system.
+- Configuration management:- It is an IT management process that tracks individual configuration items of an IT systems e.g databases and sservers.
 
 ## Tools
 1. Puppet
