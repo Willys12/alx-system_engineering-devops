@@ -11,4 +11,3 @@ echo "Hello world!" | sudo tee /var/www/html/index.html
 
 sudo nginx -t
 sudo service nginx reload
-
