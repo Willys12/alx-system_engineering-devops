@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 301 permanent redirection
+# Creating a 301 permanent redirection
 
 # Nginx installation
 sudo apt-get update
