@@ -1,13 +1,16 @@
 #!/usr/bin/env bash
 # How to install nginx on web server.
 
+# Updating packages
 sudo apt-get update
 sudo apt-get install nginx
 sudo ufw 'Nginx HTTP'
 
+# Creating a custom index page
 echo "Hello World!" | sudo tee /var/www/html/index.html
 
 # Testing config
-
 sudo nginx -t
-sudo service nginx reload
+
+# Restarting nginx
+sudo service nginx restart
