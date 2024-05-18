@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# Configure HAproxy so that it send traffic to web-01 and web-02
+# Make sure that HAproxy can be managed via an init script.
+# Distribute requests using a roundrobin algorithm.
+
+# Updating packages & installing haproxy
+sudo apt-get -y update
+sudo apt-get install -y haproxy
+
+# Edit and config file
+server_config=\
+"
+frontend willys_frontend
+	bind *:80
+	mode http
+	default_backend willys_backend
+backend willys_backend
+	balance roundrobin
+	server 496615-web-01 52.73.27.172:80 check
+	server 496615-web-02 54.87.180.93:80 check
+"
+
+# Configuring HAproxy
+echo "$server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
+
+# Enabling Aproxy to be starte by init script
+echo "$ENABLED=1" | sudo tee -a /etc/default/haproxy
+
+# Testing haproxy configuration
+sudo haproxy -c -f /etc/haproxy/haproxy.cfg
+
+# Enabling and restarting haproxy
+sudo systemctl enable haproxy
+sudo service haproxy restart
+
+# Print status
+sudo service haproxy status
