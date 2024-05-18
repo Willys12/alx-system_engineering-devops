@@ -23,4 +23,4 @@ sudo sed -i "s/server_name _;/a add_header X-Served-By $HOSTNAME;" /etc/nginx/si
 sudo nginx -t
 
 # Restarting nginx
-sudo service nginx status
+sudo service nginx restart
