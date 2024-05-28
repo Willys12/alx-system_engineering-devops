@@ -1,9 +1,4 @@
 #!/usr/bin/env bash
-# Ccheck if user has 1 argument passed
-if [ $# -ne 1 ]; then
-   echo "Usage: $0 <username>"
-   exit 1
-fi
-
 # Running whoami command
 sudo -u "$1" whoami
+
