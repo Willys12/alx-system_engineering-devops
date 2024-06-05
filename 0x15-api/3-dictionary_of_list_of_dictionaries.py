@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" Python script to fetch REST API for todo lists of employees and save to JSON """
+"""
+Python script to fetch REST API for todo
+lists of employees and save to JSON
+"""
 
 import json
 import requests
@@ -14,7 +17,8 @@ if __name__ == '__main__':
     for user in users:
         user_id = user.get('id')
         username = user.get('username')
-        todos_url = 'https://jsonplaceholder.typicode.com/users/{}/todos'.format(user_id)
+        todos_url = 'https://jsonplaceholder.typicode.com/users/{}/todos'
+        .format(user_id)
         todos_resp = requests.get(todos_url)
         tasks = todos_resp.json()
 
