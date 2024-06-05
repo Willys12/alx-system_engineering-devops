@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Python script to fetch REST API for todo
+Python3 script to fetch REST API for todo
 lists of employees and save to JSON
 """
 
@@ -34,3 +34,4 @@ if __name__ == '__main__':
 
     with open('todo_all_employees.json', 'w') as f:
         json.dump(users_dict, f)
+
