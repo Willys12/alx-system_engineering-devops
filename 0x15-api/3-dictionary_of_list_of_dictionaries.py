@@ -18,7 +18,7 @@ if __name__ == '__main__':
         user_id = user.get('id')
         username = user.get('username')
         todos_url = 'https://jsonplaceholder.typicode.com/users/{}/todos'
-        .format(user_id)
+.format(user_id)
         todos_resp = requests.get(todos_url)
         tasks = todos_resp.json()
 
